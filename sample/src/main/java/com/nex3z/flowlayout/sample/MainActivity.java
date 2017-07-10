@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.nex3z.flowlayout.FlowLayout;
+import com.nex3z.flowlayout.FlowLayout4DDF;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void fillAutoSpacingLayoutForDdf() {
 
-        com.nex3z.flowlayout.ddf.FlowLayout flowLayout = (com.nex3z.flowlayout.ddf.FlowLayout) findViewById(R.id.ddf_flow);
+        FlowLayout4DDF flowLayout = (FlowLayout4DDF) findViewById(R.id.ddf_flow);
         String[] dummyTexts = getResources().getStringArray(R.array.lorem_ipsum);
 
         for (String text : dummyTexts) {

@@ -1,4 +1,4 @@
-package com.nex3z.flowlayout.ddf;
+package com.nex3z.flowlayout;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -16,7 +16,7 @@ import java.util.List;
  * Created by ddf on 17/7/4.
  */
 
-public class FlowLayout extends ViewGroup {
+public class FlowLayout4DDF extends ViewGroup {
 
 
     private static final int DEFAULT_CHILD_SPACING = 0;
@@ -31,15 +31,15 @@ public class FlowLayout extends ViewGroup {
     private List<Integer> mHeightForRowLst = new ArrayList<>();
     private List<Integer> mChildNumForRowLst = new ArrayList<>();
 
-    public FlowLayout(Context context) {
+    public FlowLayout4DDF(Context context) {
         this(context, null);
     }
 
-    public FlowLayout(Context context, AttributeSet attrs) {
+    public FlowLayout4DDF(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public FlowLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+    public FlowLayout4DDF(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.FlowLayout, 0, 0);
         mChildSpacing = a.getInt(R.styleable.FlowLayout_childSpacing, DEFAULT_CHILD_SPACING);

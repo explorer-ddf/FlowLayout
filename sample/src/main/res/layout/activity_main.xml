@@ -13,7 +13,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.nex3z.flowlayout.sample.MainActivity">
 
-    <com.nex3z.flowlayout.ddf.FlowLayout
+    <com.nex3z.flowlayout.FlowLayout4DDF
         android:id="@+id/ddf_flow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
