@@ -65,6 +65,9 @@ public class FlowLayout4DDF extends ViewGroup {
         return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, getResources().getDisplayMetrics());
     }
 
+    /**
+     *  widthMeasureSpec: 为该FlowLayout的widthMeasureSpec， 表示父容器对该view的限制
+     */
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         int widthSize = MeasureSpec.getSize(widthMeasureSpec);
@@ -75,7 +78,7 @@ public class FlowLayout4DDF extends ViewGroup {
         int measuredWidth = 0;
         int measuredHeight = 0;
 
-        final int rowMaxWidth = widthSize - getPaddingLeft() - getPaddingRight();
+        final int rowMaxWidth = widthSize - getPaddingLeft() - getPaddingRight(); // 一行的最大宽度
         int rowCurWidth = 0;    //当前行宽
         int rowCurHeight = 0;   //当前行高
         int childNumInRow = 0;  //一行child数量
