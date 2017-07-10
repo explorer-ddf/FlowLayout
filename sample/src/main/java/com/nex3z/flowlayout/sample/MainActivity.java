@@ -19,6 +19,18 @@ public class MainActivity extends AppCompatActivity {
         initButton();
 
         fillAutoSpacingLayout();
+        fillAutoSpacingLayoutForDdf();
+    }
+
+    private void fillAutoSpacingLayoutForDdf() {
+
+        com.nex3z.flowlayout.ddf.FlowLayout flowLayout = (com.nex3z.flowlayout.ddf.FlowLayout) findViewById(R.id.ddf_flow);
+        String[] dummyTexts = getResources().getStringArray(R.array.lorem_ipsum);
+
+        for (String text : dummyTexts) {
+            TextView textView = buildLabel(text);
+            flowLayout.addView(textView);
+        }
     }
 
     private void initButton() {
